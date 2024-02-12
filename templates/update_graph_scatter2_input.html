@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>raman_analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="number"],
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'raman_analysis' %}" method="get">
+        
+        <label for="method">method:</label>
+    <select type="text" name="method">
+        <option method="method"> </option>
+        <option method="Ridge Regression">Ridge Regression</option>
+        <option method="Lasso">Lasso</option>
+        <option method="Elastic Net">Elastic Net</option>
+        <option method="Principal component analysis (PCA) with Linear Regression">Principal component analysis (PCA) with Linear Regression</option>
+        <option method="Partial least squares regression">Partial least squares regression</option>
+    </select><br>
+   
+        <label for="parameter">parameter:</label>
+    <select type="text" name="parameter">
+        <option method="method"> </option>
+        <option parameter="Glucose">Glucose</option>
+        <option parameter="Lactate">Lactate</option>
+        <option parameter="Glutamine">Glutamine</option>
+        <option parameter="NH4">NH4</option>
+    </select><br>
+        
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

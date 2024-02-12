@@ -1,0 +1,27 @@
+<!-- simulate_julia_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulate Julia</title>
+</head>
+<body>
+    <h2>Julia Simulation Parameters</h2>
+    <form action="{% url 'simulate_julia' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="noise" placeholder="Noise" required><br>
+        <input type="text" name="Xv0" placeholder="Xv0" required><br>
+        <input type="text" name="Glc0" placeholder="Glc0" required><br>
+        <input type="text" name="Gln0" placeholder="Gln0" required><br>
+        <input type="text" name="Lac0" placeholder="Lac0" required><br>
+        <input type="text" name="NH40" placeholder="NH40" required><br>
+        <input type="text" name="P10" placeholder="P10" required><br>
+        <input type="text" name="P20" placeholder="P20" required><br>
+        <input type="text" name="P30" placeholder="P30" required><br>
+        <input type="text" name="VB0" placeholder="VB0" required><br>
+        <input type="text" name="VH0" placeholder="VH0" required><br>
+        <input type="text" name="username" placeholder="username" required><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

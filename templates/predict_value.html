@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GlycosylationODESlover</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="number"],
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'predict_value' %}" method="get">
+        <form action="{% url 'predict_value' %}" method="get">
+        
+            <label for="username">username:</label>
+        <input type="text" id="username" name="username"><br>
+        
+            <label for=" interval"> interval:</label>
+        <input type="number" id=" interval" name=" interval"><br>
+            
+            <label for="start_value"> start_value:</label>
+        <input type="number" id=" start_value" name=" start_value"><br>
+            
+            <label for=" end_value"> end_value:</label>
+        <input type="number" id=" end_value" name=" end_value"><br>
+            
+            <label for="t"> t:</label>
+        <input type="number" id=" t" name="t"><br>
+            
+            <label for="factor">factor:</label>
+        <select id="factor" name="factor">
+            <option factor="Cell Density">Cell Density</option>
+            <option factor="Glucose">Glucose</option>
+            <option factor="Glutamine">Glutamine</option>
+            <option factor="Product">Product</option>
+            <option factor="Impurity1">Impurity1</option>
+            <option factor="Impurity2">Impurity2</option>
+        </select><br>
+            
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
